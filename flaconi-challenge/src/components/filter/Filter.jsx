@@ -36,7 +36,7 @@ export const Filter = ({ filterLabels, type, title }) => {
       dispatch({type: 'REMOVE_FILTER', payload: name})
     } else {
       setFilterSelected(prevState => [...prevState, name])
-      dispatch({type: 'ADD_FILTER', payload: name})
+      dispatch({type: 'ADD_FILTER', payload: {name, type}})
     }
   };
 

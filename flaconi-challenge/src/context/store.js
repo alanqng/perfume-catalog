@@ -12,11 +12,17 @@ const StateProvider = ({ children }) => {
       case "FILTER_DATA":
         return {
           ...state,
+          // filteredData: [
+          //   ...filterHelper(
+          //     state.activeFilters.length > 0 ? state.filteredData : state.data,
+          //     action.payload.type,
+          //     action.payload.filterSelected
+          //   )
+          // ]
           filteredData: [
             ...filterHelper(
-              state.activeFilters.length > 0 ? state.filteredData : state.data,
-              action.payload.type,
-              action.payload.filterSelected
+                state.data,
+                state.activeFilters
             )
           ]
         };
@@ -30,7 +36,7 @@ const StateProvider = ({ children }) => {
         case "REMOVE_FILTER":
             return {
                 ...state,
-                activeFilters: [...state.activeFilters.filter(filter => filter !== action.payload)]
+                activeFilters: [...state.activeFilters.filter(filter => filter.name !== action.payload)]
             };
       default:
         return state;
