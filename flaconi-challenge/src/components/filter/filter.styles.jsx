@@ -8,16 +8,9 @@ export const FilterDiv = styled.div`
     //overflow: auto;
     position: relative;
 
-
-.instructions {
-    width: 100%;
-    text-align: center;
-}
-
 .dropdown-button {
     float: left;
     width: 100%;
-    background: whitesmoke;
     padding: 10px 12px;
     background-color: white;
     cursor: pointer;

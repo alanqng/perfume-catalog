@@ -8,6 +8,11 @@ export const HomepageDiv = styled.div`
     font-size: 38px;
     margin: 0 auto 30px;
   }
+  
+  .filter-container {
+    display: flex;
+    
+  }
 
   .items {
     display: grid;
