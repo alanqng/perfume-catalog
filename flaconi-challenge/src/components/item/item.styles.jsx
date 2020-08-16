@@ -5,12 +5,13 @@ export const ItemDiv = styled.div`
     //max-width: 400px;
     display: flex;
     flex-direction: column;
-    height: 350px;
+    //height: 350px;
     align-items: center;
     position: relative;
 
     img {
-      //width: 100%;
+      max-width: 100%;
+      display: block;
       //height: 95%;
       ////background-size: cover;
       background-position: center;
@@ -30,6 +31,14 @@ export const ItemDiv = styled.div`
       p {
       margin: 0;
       color: rgba(0,0,0,0.42);
+      }
+    }
+    
+    .price {
+      p {
+        margin: 0;
+        font-weight: bold;
+        font-size: 12px;
       }
     }
 
@@ -60,7 +69,7 @@ export const ItemDiv = styled.div`
     }
 
     @media only screen and (max-width: 800px) {
-      width: 40vw;
+      //width: 40vw;
 
       &:hover {
         .image {
