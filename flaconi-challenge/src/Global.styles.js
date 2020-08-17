@@ -10,6 +10,13 @@ export const GlobalStyle = createGlobalStyle`
         @media only screen and (max-width: 800px) {
             padding: 10px;
         }
+        
+        @media only screen and (max-width: 580px) {
+            //padding: 10px;
+            padding: 10px 10px;
+            margin: 0;
+            max-width: unset;;
+        }
     }
     a {
         text-decoration: none;

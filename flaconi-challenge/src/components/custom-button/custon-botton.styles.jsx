@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ButtonStyled = styled.button`
-  min-width: 165px;
+    min-width: 165px;
     width: auto;
     height: 50px;
     letter-spacing: 0.5px;
@@ -44,5 +44,13 @@ export const ButtonStyled = styled.button`
         color: white;
         border: none;
       }
+    }
+    
+    @media only screen and (max-width: 580px) {
+      min-width: unset;
+      width: 75px;
+      height: 40px;
+      line-height: 40px;
+      margin: 0 auto;
     }
 `

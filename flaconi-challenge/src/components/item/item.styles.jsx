@@ -81,21 +81,18 @@ export const ItemDiv = styled.div`
         }
       }
     }
-
-    .collection-footer {
+    
+    @media only screen and (max-width: 800px) {
       width: 100%;
-      height: 5%;
-      display: flex;
-      justify-content: space-between;
-      font-size: 18px;
 
-      .name {
-        width: 90%;
-        margin-bottom: 15px;
-      }
+      &:hover {
+        .image {
+          opacity: unset;
+        }
 
-      .price {
-        width: 10%;
+        .custom-button {
+          opacity: unset;
+        }
       }
     }
 `;

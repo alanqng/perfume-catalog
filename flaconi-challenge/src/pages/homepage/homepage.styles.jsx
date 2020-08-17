@@ -11,9 +11,18 @@ export const HomepageDiv = styled.div`
   
   .filter-container {
     display: flex;
+    justify-content: center;
     
+    & :first-child {
+    margin-right: 10px;
+    }
   }
-
+  
+  .paginator {
+      display: flex;
+      justify-content: center;
+    }
+    
   .items {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -24,6 +33,14 @@ export const HomepageDiv = styled.div`
       grid-template-columns: 1fr 1fr;
 
     }
+    
+    
+    
+    //@media only screen and (max-width: 580px) {
+    //  grid-template-columns: 1fr;
+    //  width: 100%;
+    //
+    //}
 
     & .collection-item {
       margin-bottom: 30px;

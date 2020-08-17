@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
 import { FilterDiv } from "./filter.styles";
-import { CustomButton } from "../Custom-Button/CustomButton";
+import { CustomButton } from "../custom-button/CustomButton";
 import { store } from "../../context/store";
 
 export const Filter = ({ filterLabels, type, title }) => {
