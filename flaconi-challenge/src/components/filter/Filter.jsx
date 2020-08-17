@@ -7,8 +7,9 @@ export const Filter = ({ filterLabels, type, title }) => {
   const [showFilter, setShowFilter] = useState(false);
   const [filterTypes, setFilterType] = useState([]);
   const [filterSelected, setFilterSelected] = useState([]);
-  const { dispatch, state } = useContext(store);
+  const { dispatch } = useContext(store);
   // const wrapperRef = useRef()
+
   useEffect(() => {
     const uniqueFilters = new Set([...filterLabels]);
     const filterTypesData = [...uniqueFilters].map(filter => ({
@@ -22,10 +23,9 @@ export const Filter = ({ filterLabels, type, title }) => {
   };
 
   const onFilter = () => {
-    console.warn(filterSelected)
     dispatch({ type: "FILTER_DATA", payload: {filterSelected, type} });
     onShowFilter()
-    console.log("working");
+
   };
 
   const onSelectFilter = event => {

@@ -13,7 +13,7 @@ const Homepage = () => {
 
   useEffect(() => {
       dispatch({type: 'SORT_DATA', payload: 'rating'})
-  }, [])
+  }, []);
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;

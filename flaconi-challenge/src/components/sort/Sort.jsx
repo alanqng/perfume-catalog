@@ -3,10 +3,9 @@ import { SortContainer } from "./sort.styles";
 import {store} from "../../context/store";
 
 export const Sort = () => {
-    const { dispatch, state } = useContext(store);
+    const { dispatch } = useContext(store);
 
     const onSort = (value) => {
-        console.log(value)
         dispatch({type: 'SORT_DATA', payload: value})
     };
 

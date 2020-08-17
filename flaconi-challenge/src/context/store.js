@@ -23,8 +23,6 @@ const StateProvider = ({ children }) => {
           filteredData: [...filterHelper(state.data, state.activeFilters)]
         };
       case "ADD_FILTER":
-        console.log(state.activeFilters);
-        console.log(action.payload);
         return {
           ...state,
           activeFilters: [...state.activeFilters, action.payload]

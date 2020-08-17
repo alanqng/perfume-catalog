@@ -12,7 +12,6 @@
 // }
 
 export const filterHelper = (data, activeFilters) => {
-    console.log(data)
     let newData = [];
     if (activeFilters.length === 0) {
         return data
