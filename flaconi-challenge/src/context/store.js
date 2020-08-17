@@ -1,6 +1,7 @@
 import React, { createContext, useReducer } from "react";
 import { data } from "./data";
 import { filterHelper } from "../helpers/filterHelpers";
+import {sortData} from "../helpers/sortHelper";
 
 const initialState = { data: data, filteredData: data, activeFilters: [] };
 const store = createContext(initialState);
@@ -19,25 +20,29 @@ const StateProvider = ({ children }) => {
           //     action.payload.filterSelected
           //   )
           // ]
-          filteredData: [
-            ...filterHelper(
-                state.data,
-                state.activeFilters
-            )
-          ]
+          filteredData: [...filterHelper(state.data, state.activeFilters)]
         };
       case "ADD_FILTER":
-        console.log(state.activeFilters)
-        console.log(action.payload)
+        console.log(state.activeFilters);
+        console.log(action.payload);
         return {
           ...state,
           activeFilters: [...state.activeFilters, action.payload]
         };
-        case "REMOVE_FILTER":
-            return {
-                ...state,
-                activeFilters: [...state.activeFilters.filter(filter => filter.name !== action.payload)]
-            };
+      case "REMOVE_FILTER":
+        return {
+          ...state,
+          activeFilters: [
+            ...state.activeFilters.filter(
+              filter => filter.name !== action.payload
+            )
+          ]
+        };
+      case "SORT_DATA":
+        return {
+          ...state,
+          filteredData: [...sortData(action.payload, state.filteredData)]
+        };
       default:
         return state;
     }

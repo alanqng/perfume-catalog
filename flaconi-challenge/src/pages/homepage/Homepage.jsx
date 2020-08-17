@@ -1,14 +1,19 @@
-import React, { useContext, useState } from "react";
+import React, {useContext, useEffect, useState} from "react";
 import { Item } from "../../components/item/Item";
 import { HomepageDiv } from "./homepage.styles";
 import { store } from "../../context/store";
 import { Filter } from "../../components/filter/Filter";
 import { Pagination } from "../../components/pagination/Pagination";
+import {Sort} from "../../components/sort/Sort";
 
 const Homepage = () => {
   const { dispatch, state } = useContext(store);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(9);
+
+  useEffect(() => {
+      dispatch({type: 'SORT_DATA', payload: 'rating'})
+  }, [])
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -33,6 +38,9 @@ const Homepage = () => {
           filterLabels={state.data.map(item => item.type)}
         />
       </div>
+        <div className={'sort-container'}>
+            <Sort/>
+        </div>
       <div className={"items"}>
         {currentPosts.map(item => (
           <Item key={item.id} item={item} />

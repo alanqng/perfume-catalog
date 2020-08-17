@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { FilterDiv } from "./filter.styles";
 import { CustomButton } from "../custom-button/CustomButton";
 import { store } from "../../context/store";
@@ -12,12 +12,11 @@ export const Filter = ({ filterLabels, type, title }) => {
   useEffect(() => {
     const uniqueFilters = new Set([...filterLabels]);
     const filterTypesData = [...uniqueFilters].map(filter => ({
-      checked: false,
       name: filter
     }));
     setFilterType(prevState => [...filterTypesData]);
   }, []);
-  // console.log(wrapperRef)
+
   const onShowFilter = () => {
     setShowFilter(prevState => !prevState);
   };

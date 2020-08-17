@@ -18,6 +18,12 @@ export const HomepageDiv = styled.div`
     }
   }
   
+  .sort-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
   .paginator {
       display: flex;
       justify-content: center;
