@@ -12,3 +12,5 @@ If you want to use the docker image instead run the following commands in the te
 
 - `docker build . -t flaconi-docker`
 - `docker run -p 8080:80 flaconi-docker`
+
+Once is running you can go to your browser to your [localhost:8080](http://localhost:8080)
