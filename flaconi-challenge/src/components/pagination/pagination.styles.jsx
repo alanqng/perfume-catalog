@@ -13,5 +13,6 @@ export const PaginatorContainer = styled.ul`
     border-radius: 0;
     margin-left: 0;
     border-width: 1px 0 0 1px;
+    font-weight: ${props => props.current ? 'bold' : 0};
   }
 `;

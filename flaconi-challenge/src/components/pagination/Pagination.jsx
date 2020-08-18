@@ -36,7 +36,7 @@ export const Pagination = ({
         </a>
       </li>
       {pageNumbers.map(number => (
-        <li key={number}>
+        <li key={number} style={{fontWeight: pageNumber === number ? 'bold' : ''}}>
           <a onClick={() => paginate(number)} href="#">
             {number}
           </a>
