@@ -2,14 +2,16 @@ import React from 'react';
 import { ItemDiv } from './item.styles';
 
 export const Item = ({ item }) => {
+  // Method for striping the brand and type from name
   const getName = (name, brand, type) => {
-      if (name) {
-          let newName = name.replace(brand, '');
-          newName = newName.replace(type, '');
-          return newName;
-      }
+    if (name) {
+      let newName = name.replace(brand, '');
+      newName = newName.replace(type, '');
+      return newName;
+    }
   };
 
+  // Format price
   const getPrice = price => {
     let newPrice = price / 100;
     return newPrice.toString().replace('.', ',') + ' €';
@@ -28,9 +30,7 @@ export const Item = ({ item }) => {
           From {getPrice(item.price)} / {item.size}
         </p>
       </div>
-        <div>
-            {item.rating} %
-        </div>
+        <div className={'rating'}><span>Rating: </span><b>{item.rating} %</b></div>
     </ItemDiv>
   );
 };

@@ -1,56 +1,34 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ButtonStyled = styled.button`
-    min-width: 165px;
-    width: auto;
-    height: 50px;
-    letter-spacing: 0.5px;
-    line-height: 50px;
-    padding: 0 35px 0 35px;
-    font-size: 15px;
-    background-color: black;
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Open Sans Condensed';
-    font-weight: bolder;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-  
-    &:hover {
-      background-color: white;
-      color: black;
-      border: 1px solid black;
-    }
+  min-width: 150px;
+  width: auto;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed';
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
 
-    &.google-sign-in {
-      background-color: #4285f4;
-      color: white;
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
 
-      &:hover {
-        background-color: #357ae8;
-        border: none;
-      }
-    }
-
-    &.inverted {
-      background-color: white;
-      color: black;
-      border: 1px solid black;
-
-      &:hover {
-        background-color: black;
-        color: white;
-        border: none;
-      }
-    }
-    
-    @media only screen and (max-width: 580px) {
-      min-width: unset;
-      width: 75px;
-      height: 40px;
-      line-height: 40px;
-      margin: 0 auto;
-    }
-`
+  @media only screen and (max-width: 800px) {
+    min-width: unset;
+    width: 75px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+  }
+`;

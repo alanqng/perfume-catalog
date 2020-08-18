@@ -1,14 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const FilterDiv = styled.div`
- 
-    width: 200px;
-    //margin: 20px auto 0;
-    font-size: 14px;
-    //overflow: auto;
-    position: relative;
+  width: 200px;
+  //margin: 20px auto 0;
+  font-size: 14px;
+  //overflow: auto;
+  position: relative;
 
-.dropdown-button {
+  .dropdown-button {
     float: left;
     width: 100%;
     padding: 10px 12px;
@@ -16,21 +15,22 @@ export const FilterDiv = styled.div`
     cursor: pointer;
     border: 1px solid lightgray;
     box-sizing: border-box;
-    
-    .dropdown-label, .dropdown-quantity {
-        float: left;
-    }
-    
-    .dropdown-quantity {
-        margin-left: 4px;
-    }
-    
-    .fa-filter {
-        float: right;
-    }
-}
 
-.dropdown-list {
+    .dropdown-label,
+    .dropdown-quantity {
+      float: left;
+    }
+
+    .dropdown-quantity {
+      margin-left: 4px;
+    }
+
+    .fa-filter {
+      float: right;
+    }
+  }
+
+  .dropdown-list {
     float: left;
     width: 100%;
     background-color: white;
@@ -42,19 +42,19 @@ export const FilterDiv = styled.div`
     z-index: 1000;
     left: 0;
     top: 100%;
-    
+
     ul {
-        margin: 10px 0;
-        max-height: 200px;
-        overflow-y: auto;
-        padding-left: 0;
-        li {
+      margin: 10px 0;
+      max-height: 200px;
+      overflow-y: auto;
+      padding-left: 0;
+      li {
         list-style: none;
-        }        
-        input[type="checkbox"] {
-            position: relative;
-            top: 2px;
-        }
+      }
+      input[type='checkbox'] {
+        position: relative;
+        top: 2px;
+      }
     }
-}
-`
+  }
+`;

@@ -1,17 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SortContainer = styled.div`
   display: flex;
   align-items: center;
-  
+
   label {
-  margin-right: 5px;
-  width: 100%;
-  line-height: 20px;
-  vertical-align: center;
-  display: inline-block;
+    margin-right: 5px;
+    width: 100%;
+    line-height: 20px;
+    vertical-align: center;
+    display: inline-block;
   }
-  
+
   select {
     //float: left;
     //width: 100%;
@@ -20,7 +20,6 @@ export const SortContainer = styled.div`
     cursor: pointer;
     border: 1px solid lightgray;
     box-sizing: border-box;
-    font-family: 'Open Sans Condensed',
-    monospace;
+    font-family: 'Open Sans Condensed', monospace;
   }
-`
+`;
