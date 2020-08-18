@@ -13,24 +13,29 @@ export const HomepageDiv = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    & :nth-child(2) {
-      margin-right: 10px;
+    
+    div {
+    margin-right: 2px;
     }
+    
     p {
       margin-right: 5px;
+    }
+    
+    button {
     }
     
     @media only screen and (max-width: 700px) {
       flex-direction: column;
       
+      div {
+      margin-bottom: 2px;
+      }
+      
       p {
         margin: 0;
       }
       
-      & :nth-child(2) {
-      margin-right: 0;
-      padding-bottom: 2px;
-    }
     }
   }
 
@@ -53,16 +58,6 @@ export const HomepageDiv = styled.div`
 
     @media only screen and (max-width: 800px) {
       grid-template-columns: 1fr 1fr;
-    }
-
-    //@media only screen and (max-width: 580px) {
-    //  grid-template-columns: 1fr;
-    //  width: 100%;
-    //
-    //}
-
-    & .collection-item {
-      margin-bottom: 30px;
     }
   }
 `;

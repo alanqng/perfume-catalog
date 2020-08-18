@@ -56,5 +56,9 @@ export const FilterDiv = styled.div`
         top: 2px;
       }
     }
+    
+    button {
+    margin: 0 auto;
+    }
   }
 `;

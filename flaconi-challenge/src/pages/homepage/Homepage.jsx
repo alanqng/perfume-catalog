@@ -31,6 +31,7 @@ const Homepage = () => {
       <div className={'filter-container'}>
           <p>Filter by: </p>
         <Filter
+            class={'first-filter'}
           type={'brand'}
           title={'Brands'}
           filterLabels={state.data.map(item => item.brand)}
