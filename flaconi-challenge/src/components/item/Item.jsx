@@ -2,6 +2,7 @@ import React from 'react';
 import { ItemDiv } from './item.styles';
 
 export const Item = ({ item }) => {
+
   // Method for striping the brand and type from name
   const getName = (name, brand, type) => {
     if (name) {

@@ -22,9 +22,6 @@ export const HomepageDiv = styled.div`
       margin-right: 5px;
     }
     
-    button {
-    }
-    
     @media only screen and (max-width: 700px) {
       flex-direction: column;
       

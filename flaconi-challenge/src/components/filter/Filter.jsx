@@ -9,6 +9,7 @@ export const Filter = ({ filterLabels, type, title }) => {
   const [filterSelected, setFilterSelected] = useState([]);
   const { dispatch } = useContext(store);
 
+  // Removing duplicates from filters on first render
   useEffect(() => {
     const uniqueFilters = new Set([...filterLabels]);
     const filterTypesData = [...uniqueFilters].map(filter => ({
@@ -26,6 +27,7 @@ export const Filter = ({ filterLabels, type, title }) => {
     onShowFilter();
   };
 
+  // Adding active filters to state when selecting or deselecting
   const onSelectFilter = event => {
     const { name } = event.target;
     if (filterSelected.includes(name)) {
@@ -39,6 +41,7 @@ export const Filter = ({ filterLabels, type, title }) => {
     }
   };
 
+  // Method for checking is filter is marked
   const checked = name => {
     if (filterSelected.includes(name)) {
       return true;
@@ -50,8 +53,6 @@ export const Filter = ({ filterLabels, type, title }) => {
     <FilterDiv>
       <div className={'dropdown-button noselect'} onClick={onShowFilter}>
         <div className={'dropdown-label'}>{title}</div>
-        <div className={'dropdown-quantity'}></div>
-        <i className={'fa fa-filter'}></i>
       </div>
       <div
         className={'dropdown-list'}

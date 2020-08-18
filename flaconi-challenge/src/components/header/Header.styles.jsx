@@ -9,7 +9,6 @@ export const HeaderComponent = styled.div`
 
     @media only screen and (max-width: 800px) {
       height: 60px;
-      //padding: 10px;
       margin-bottom: 20px;
     }
 
@@ -17,7 +16,6 @@ export const HeaderComponent = styled.div`
     .logo-container {
         height: 100%;
         width: 70px;
-        //padding: 25px;
 
         @media only screen and (max-width: 800px) {
           width: 50px;

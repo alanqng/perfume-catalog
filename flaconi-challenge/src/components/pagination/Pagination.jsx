@@ -15,16 +15,12 @@ export const Pagination = ({
   const nextPage = () => {
     if (pageNumber < Math.ceil(totalPosts / postsPerPage)) {
       paginate(pageNumber + 1);
-    } else {
-      return;
     }
   };
 
   const previousPage = () => {
     if (pageNumber > 1) {
       paginate(pageNumber - 1);
-    } else {
-      return;
     }
   };
 

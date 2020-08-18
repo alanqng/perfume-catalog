@@ -2,9 +2,7 @@ import styled from 'styled-components';
 
 export const FilterDiv = styled.div`
   width: 200px;
-  //margin: 20px auto 0;
   font-size: 14px;
-  //overflow: auto;
   position: relative;
 
   .dropdown-button {

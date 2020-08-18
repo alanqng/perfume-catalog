@@ -13,8 +13,6 @@ export const SortContainer = styled.div`
   }
 
   select {
-    //float: left;
-    //width: 100%;
     padding: 10px 12px;
     background-color: white;
     cursor: pointer;

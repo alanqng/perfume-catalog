@@ -2,18 +2,14 @@ import styled from 'styled-components';
 
 export const ItemDiv = styled.div`
   width: 17vw;
-  //max-width: 400px;
   display: flex;
   flex-direction: column;
-  //height: 350px;
   align-items: center;
   position: relative;
 
   img {
     max-width: 100%;
     display: block;
-    //height: 95%;
-    ////background-size: cover;
     background-position: center;
     margin-bottom: 5px;
   }
@@ -73,7 +69,6 @@ export const ItemDiv = styled.div`
   }
 
   @media only screen and (max-width: 800px) {
-    //width: 40vw;
 
     &:hover {
       .image {
